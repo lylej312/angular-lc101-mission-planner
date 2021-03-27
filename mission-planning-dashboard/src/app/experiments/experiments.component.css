@@ -1,0 +1,21 @@
+.experiments-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6.125em;
+}
+
+h3 {
+  font-size: 40px;
+  margin-bottom: 0px;
+  text-decoration: underline;
+}
+
+li {
+  font-size: 25px;
+}
+
+ul {
+  list-style-type: disc;
+}

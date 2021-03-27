@@ -1,4 +1,78 @@
+@import "~normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+body {
+  display: block;
+  background-color: rgb(51, 50, 50);
+  width: 100%;
+  height: fit-content;
+  padding: 0px;
+
+  border-radius: 20px;
+}
+
+app-header {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  color: purple;
+}
+
+hr {
+  width: 70%;
+}
+
 .box {
   display: flex;
-  padding: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4em;
+  font-family: "Open Sans", sans-serif;
+}
+
+app-crew {
+  color: rgb(0, 139, 139);
+  background: black;
+  width: 50%;
+  height: 100%;
+  margin: 10px 15px 10px 15px;
+  border-radius: 50px;
+}
+
+app-experiments {
+  color: rgb(0, 139, 139);
+  background: black;
+  width: 50%;
+  height: 100%;
+  margin: 10px 15px 10px 15px;
+  border-radius: 50px;
+}
+
+app-equipment {
+  color: rgb(0, 139, 139);
+  background: black;
+  width: 50%;
+  height: 100%;
+  margin: 10px 15px 10px 15px;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 1151px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  app-equipment {
+    min-width: 306px;
+  }
+
+  app-experiments {
+    min-width: 306px;
+  }
+
+  app-crew {
+    min-width: 306px;
+  }
 }
