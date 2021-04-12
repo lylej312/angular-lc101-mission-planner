@@ -21,7 +21,7 @@ export class EquipmentComponent implements OnInit {
   cargoMass: number = 0;
   maximumAllowedMass: number = 2000;
   maxItems: number = 10;
-  canAddMoreItems: boolean = true;
+  nearMaxMass: boolean = false;
 
   constructor() {}
 
@@ -29,21 +29,18 @@ export class EquipmentComponent implements OnInit {
 
   // Code your addItem function here:
   addItem(equipmentItem: object) {
-    if (
-      equipmentItem["mass"] + this.cargoMass > this.maximumAllowedMass ||
-      this.cargoHold.length === this.maxItems
-    ) {
-      this.canAddMoreItems = false;
-    } else {
-      this.cargoHold.push(equipmentItem);
-      this.cargoMass = this.cargoMass + equipmentItem["mass"];
-    }
-    // this.canAddMoreItems = true;
+    this.cargoHold.push(equipmentItem);
+    this.cargoMass = this.cargoMass + equipmentItem["mass"];
 
     if (this.cargoMass > 1799) {
-      return true;
+      this.nearMaxMass = true;
     } else {
-      return false;
+      this.nearMaxMass = false;
     }
+  }
+
+  emptyHold() {
+    this.cargoHold = [];
+    this.cargoMass = 0;
   }
 }
