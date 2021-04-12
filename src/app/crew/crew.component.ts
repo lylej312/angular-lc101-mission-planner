@@ -7,6 +7,8 @@ import { Component, OnInit } from "@angular/core";
 })
 export class CrewComponent implements OnInit {
   crew: object[] = [];
+  currPhoto: string = "";
+  displayImage: boolean = false;
 
   candidates: object[] = [
     {
@@ -52,12 +54,7 @@ export class CrewComponent implements OnInit {
 
   // Code the 'addCrewMember' function here:
   addCrewMember(candidate: object): void {
-    for (let i = 0; i < this.crew.length; i++) {
-      let candidate = this.crew[i];
-      candidate["inCrew"] = false;
-    }
-
-    let index = this.crew.indexOf(candidate);
+    const index = this.crew.indexOf(candidate);
     if (index < 0 && this.crew.length < 3) {
       candidate["inCrew"] = true;
       this.crew.push(candidate);
@@ -65,5 +62,10 @@ export class CrewComponent implements OnInit {
       candidate["inCrew"] = false;
       this.crew.splice(index, 1);
     }
+  }
+
+  findImage(candidate: object): void {
+    const photo = candidate["photo"];
+    this.currPhoto = photo;
   }
 }
