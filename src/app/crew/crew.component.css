@@ -1,10 +1,19 @@
+li {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 li:hover {
   cursor: pointer;
+  font-weight: bold;
+}
+
+li {
+  list-style-type: none;
 }
 
 .displayBox {
-  height: 275px;
-  width: auto;
+  height: 100%;
+  width: fit-content;
 }
 
 img {
@@ -17,9 +26,23 @@ img {
 
 h3 {
   text-align: center;
+  font-size: 40px;
 }
 
 /* Add a 'selected' class here to style selected astronaut names a different color. */
 .selected {
   color: red;
+}
+
+.green {
+  color: green;
+  font-style: italic;
+}
+
+.image {
+  text-align: center;
+}
+
+hr {
+  width: 100%;
 }

@@ -1,8 +1,30 @@
 .displayBox {
-    height: 275px;
-    width: auto;
+  height: 100%;
+  width: auto;
+}
+
+.displayBox2 {
+  height: 100%;
+  width: auto;
 }
 
 h3 {
-    text-align: center;
+  text-align: center;
+  font-size: 40px;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.displayBox {
+  height: fit-content;
+}
+
+hr {
+  width: 100%;
+}
+
+li {
+  font-family: Arial, Helvetica, sans-serif;
 }

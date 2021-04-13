@@ -1,7 +1,24 @@
 <div class="displayBox">
-    <h3>Possible Experiments</h3>
-    <ul>
-      <li *ngFor="let experiment of experiments">{{experiment}}</li>
-    </ul>
+  <h3>Possible Experiments</h3>
+  <ul>
+    <li
+      *ngFor="let experiment of experiments"
+      (click)="addExperiment(experiment)"
+    >
+      {{ experiment }}
+    </li>
+  </ul>
 </div>
-<hr>
+<hr />
+<div class="displayBox2">
+  <h3>Active Experiments</h3>
+  <span *ngIf="activeExperiments.length === 0">No experiments selected</span>
+  <ul>
+    <li
+      *ngFor="let activeExperiment of activeExperiments"
+      (click)="removeExperiment(activeExperiment)"
+    >
+      {{ activeExperiment }}
+    </li>
+  </ul>
+</div>

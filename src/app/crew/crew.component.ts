@@ -8,6 +8,7 @@ import { Component, OnInit } from "@angular/core";
 export class CrewComponent implements OnInit {
   crew: object[] = [];
   currPhoto: string = "";
+  currID: number = null;
   displayImage: boolean = false;
 
   candidates: object[] = [
@@ -15,36 +16,43 @@ export class CrewComponent implements OnInit {
       name: "Sally Ride",
       photo:
         "https://handlers.education.launchcode.org/static/images/sally-ride.jpg",
+      astronautID: 457,
     },
     {
       name: "Mae Jemison",
       photo:
         "https://handlers.education.launchcode.org/static/images/mae-jemison.jpg",
+      astronautID: 276,
     },
     {
       name: "Ellen Ochoa",
       photo:
         "https://handlers.education.launchcode.org/static/images/ellen-ochoa.jpg",
+      astronautID: 112,
     },
     {
       name: "Frederick Gregory",
       photo:
         "https://handlers.education.launchcode.org/static/images/frederick-gregory.jpg",
+      astronautID: 900,
     },
     {
       name: "Guion Bluford",
       photo:
         "https://handlers.education.launchcode.org/static/images/guion-bluford.jpg",
+      astronautID: 388,
     },
     {
       name: "Kjell Lindgren",
       photo:
         "https://handlers.education.launchcode.org/static/images/kjell-lindgren.jpg",
+      astronautID: 209,
     },
     {
       name: "Jeanette Epps",
       photo:
         "https://handlers.education.launchcode.org/static/images/jeanette-epps.jpg",
+      astronautID: 444,
     },
   ];
 
@@ -66,6 +74,8 @@ export class CrewComponent implements OnInit {
 
   findImage(candidate: object): void {
     const photo = candidate["photo"];
+    const id = candidate["astronautID"];
     this.currPhoto = photo;
+    this.currID = id;
   }
 }

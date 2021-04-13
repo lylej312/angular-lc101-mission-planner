@@ -1,5 +1,53 @@
 .box {
-    display: flex;
-    padding: 10px;
-    justify-content: space-evenly;
+  display: flex;
+  padding: 10px;
+  justify-content: space-evenly;
+  background-color: tan;
+  width: 80%;
+  height: auto;
+  align-items: flex-start;
+  border-radius: 20px;
+  margin-bottom: 100px;
+}
+
+.biggerBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+/* app-equipment {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin: auto 20px auto 20px;
+}
+
+app-crew {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto 20px auto 20px;
+}
+
+app-experiments {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto 20px auto 20px;
+} */
+
+@media screen and (max-width: 1000px) {
+  .box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    min-width: fit-content;
+  }
 }
