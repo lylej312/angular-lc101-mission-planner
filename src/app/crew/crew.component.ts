@@ -78,4 +78,12 @@ export class CrewComponent implements OnInit {
     this.currPhoto = photo;
     this.currID = id;
   }
+
+  emptyCrew(): void {
+    for (let i = 0; i < this.crew.length; i++) {
+      const member = this.crew[i];
+      member["inCrew"] = false;
+    }
+    this.crew = [];
+  }
 }

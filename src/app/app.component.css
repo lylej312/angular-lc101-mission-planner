@@ -18,36 +18,45 @@
   height: 100%;
 }
 
-/* app-equipment {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  margin: auto 20px auto 20px;
+app-equipment {
+  margin: 10px 20px auto 20px;
+  border-right-color: gold;
+  border-right-width: 5px;
+  border-right-style: solid;
+  border-left-color: gold;
+  border-left-width: 5px;
+  border-left-style: solid;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 app-crew {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin: auto 20px auto 20px;
+  margin: 10px 20px auto 20px;
 }
 
 app-experiments {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin: auto 20px auto 20px;
-} */
+  margin: 10px 20px auto 20px;
+}
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1217px) {
   .box {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 30%;
     min-width: fit-content;
+  }
+
+  app-equipment {
+    border-right: none;
+    border-left: none;
+    border-top-color: gold;
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-bottom-color: gold;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }

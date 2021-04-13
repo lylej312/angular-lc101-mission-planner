@@ -37,7 +37,12 @@ export class EquipmentComponent implements OnInit {
       }
     }
 
-    if (n < 2) {
+    if (n < 1) {
+      equipmentItem["maxItem"] = false;
+      this.cargoHold.push(equipmentItem);
+      this.cargoMass = this.cargoMass + equipmentItem["mass"];
+    } else if (n === 1) {
+      equipmentItem["maxItem"] = true;
       this.cargoHold.push(equipmentItem);
       this.cargoMass = this.cargoMass + equipmentItem["mass"];
     }
@@ -59,5 +64,6 @@ export class EquipmentComponent implements OnInit {
   emptyHold() {
     this.cargoHold = [];
     this.cargoMass = 0;
+    this.nearMaxMass = false;
   }
 }

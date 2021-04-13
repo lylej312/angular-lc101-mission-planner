@@ -6,12 +6,12 @@
         (click)="addItem(item)"
         [class.active]="
           cargoHold.length !== maxItems &&
-          item['mass'] + cargoMass < maximumAllowedMass
+          item['mass'] + cargoMass < maximumAllowedMass &&
+          !item['maxItem']
         "
         [disabled]="
           cargoHold.length === maxItems ||
-          item['mass'] + cargoMass >= maximumAllowedMass ||
-          numberOfItem === 2
+          item['mass'] + cargoMass >= maximumAllowedMass
         "
       >
         Add to Cargo Hold
